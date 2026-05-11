@@ -12,7 +12,7 @@ class Smolforge < Formula
   depends_on "node@20"
 
   def install
-    system "npm", "install", *std_npm_args(prefix: false)
+    system "npm", "install", *std_npm_args
     bin.install_symlink libexec/"bin/sf"
     bin.install_symlink libexec/"bin/smolforge"
   end
